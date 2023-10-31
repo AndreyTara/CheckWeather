@@ -9,7 +9,7 @@ btmSubmit.addEventListener('click', function () {
 function getForecast() {
 	const city = document.querySelector('#formCity').value.toLowerCase();
 	const showWeather = document.querySelector('#showWeather');
-	const isValidCity = cityArr.find((value) => value === city)
+	const isValidCity = cityArr.find((value) => value === city);
 	if (isValidCity) {
 		const fullUrl = `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=5d066958a60d315387d9492393935c19`
 		$.ajax({
@@ -20,9 +20,9 @@ function getForecast() {
 				showWeather.innerHTML = widget;
 				imgWind.style.display = 'inline';
 			}
-		})
-	} else {
-		alert(wrongCity);
+		})else {
+		alert(wrongCity)
+		};
 	}
 }
 
